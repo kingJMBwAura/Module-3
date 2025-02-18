@@ -20,11 +20,6 @@ This repository is for collaboration on our project. Please remember to commit y
 
 ## Important Notes
 
-### `.gitignore` Adjustments
-- Remove `*` in `msys22/.gitignore` so necessary files can be tracked by Git.
-- Add `__pycache__/` to `msys22/.gitignore` to prevent unnecessary file bloating.
-- You may also ignore `venv` and local database files.
-
 ### Repository Structure
 ✅ **Only include the project folder in the repository.**  
 ❌ **Do NOT include the virtual environment (`venv`) or superfolder.**
@@ -33,3 +28,8 @@ This repository is for collaboration on our project. Please remember to commit y
 1. **Use a virtual environment** to test changes.
 2. **Ensure changes work locally** before committing.
 3. **Push updates to GitHub** so they reflect in the repository.
+
+#### ~~`.gitignore` Adjustments~~
+~~- Remove `*` in `msys22/.gitignore` so necessary files can be tracked by Git.~~
+~~- Add `__pycache__/` to `msys22/.gitignore` to prevent unnecessary file bloating.~~
+~~- You may also ignore `venv` and local database files.~~
