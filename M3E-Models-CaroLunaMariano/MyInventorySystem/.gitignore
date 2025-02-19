@@ -1,0 +1,5 @@
+# ignore cache and unnecessary files unwanted in commiting changes
+
+__pycache__/
+*.pyc
+db.sqlite3
