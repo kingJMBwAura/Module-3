@@ -28,19 +28,21 @@ comments of my program.
 [P: M3P] [S: CAROHernan] WaterBottle.objects.filter(supplied_by__name='Meister, Inc.')
 [P: M3P] [S: CAROHernan] WaterBottle.objects.filter(size__icontains="Oz").order_by('-cost')
 [P: M3P] [S: CAROHernan] WaterBottle.objects.exclude(cost=3000).filter(mouth_size='Wide Mouth')
-
-
 [P: MARIANOKyle] [S: CAROHernan] WaterBottle.objects.filter(supplied_by__name='Hangeug, Inc.')
 [P: MARIANOKyle] [S: CAROHernan] WaterBottle.objects.filter(size__icontains='Oz').order_by('cost')
 [P: MARIANOKyle] [S: CAROHernan] WaterBottle.objects.exclude(cost=3000).filter(mouth_size='Mouth')
 [P: MARIANOKyle] [S: LUNAMiguel] WaterBottle.objects.filter(mouth_size='Standard Mouth')
 [P: MARIANOKyle] [S: LUNAMiguel] WaterBottle.objects.filter(color='Green', supplied_by__name='Blue Eagle, Inc.')
 [P: MARIANOKyle] [S: LUNAMiguel] WaterBottle.objects.filter(cost__lt=3000)
-
 [P: LUNAMiguel] [S: MARIANOKyle] Supplier.objects.filter(country='Canada').values('name')
 [P: LUNAMiguel] [S: MARIANOKyle] WaterBottle.objects.order_by('sku')
 [P: LUNAMiguel] [S: MARIANOKyle] WaterBottle.objects.filter(color='Gray', brand='Kleen Kanteen')
 [P: LUNAMiguel] [S: CAROHernan] WaterBottle.objects.filter(cost__lt=2500)
 [P: LUNAMiguel] [S: CAROHernan] WaterBottle.objects.order_by('-sku')
 [P: LUNAMiguel] [S: CAROHernan] Supplier.objects.get(pk=2).waterbottle_set.all()
-
+[P: CAROHernan] [S: LUNAMiguel] WaterBottle.objects.filter(size__icontains='1 Liter')
+[P: CAROHernan] [S: LUNAMiguel] WaterBottle.objects.filter(supplied_by__country='USA')
+[P: CAROHernan] [S: LUNAMiguel] WaterBottle.objects.filter(cost__range=(2000,4000))
+[P: CAROHernan] [S: MARIANOKyle] WaterBottle.objects.filter(size="1.2 Liter")
+[P: CAROHernan] [S: MARIANOKyle] WaterBottle.objects.filter(color='Black', mouth_size="Wide Mouth")
+[P: CAROHernan] [S: MARIANOKyle] Supplier.objects.filter(created_at__year="2025")
