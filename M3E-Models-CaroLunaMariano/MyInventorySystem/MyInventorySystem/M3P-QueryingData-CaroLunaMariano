@@ -1,5 +1,5 @@
-233790                  221366                    id num
-Juan Miguel B. Luna     Hernan Miguel Caro        name
+233790                  221366                    234022
+Juan Miguel B. Luna     Hernan Miguel Caro        Kyle Brandon Mariano
 
 February 20, 2025
 -- -- --
@@ -16,4 +16,31 @@ obtained from another source, it has been clearly noted with citations in the
 comments of my program.
 -- -- --
 
-[P: M3P] [S:LUNAMiguel] WaterBottle.objects.all()
+[P: M3P] [S: MARIANOKyle] WaterBottle.objects.all()
+[P: M3P] [S: MARIANOKyle] Supplier.objects.order_by('country')
+[P: M3P] [S: MARIANOKyle] WaterBottle.objects.order_by('brand')
+[P: M3P] [S: MARIANOKyle] WaterBottle.objects.filter(color='Black')
+[P: M3P] [S: LUNAMiguel] WaterBottle.objects.filter(color='White', brand='Hydro Flask')
+[P: M3P] [S: LUNAMiguel] WaterBottle.objects.filter(supplied_by__name='Sailfish, Inc.')
+[P: M3P] [S: LUNAMiguel] WaterBottle.objects.filter(color='Blue', supplied_by__name='Bucky, Inc.')
+[P: M3P] [S: LUNAMiguel] Supplier.objects.filter(country='Germany').values('name')
+[P: M3P] [S: CAROHernan] WaterBottle.objects.filter(cost__gte=3000)
+[P: M3P] [S: CAROHernan] WaterBottle.objects.filter(supplied_by__name='Meister, Inc.')
+[P: M3P] [S: CAROHernan] WaterBottle.objects.filter(size__icontains="Oz").order_by('-cost')
+[P: M3P] [S: CAROHernan] WaterBottle.objects.exclude(cost=3000).filter(mouth_size='Wide Mouth')
+
+
+[P: MARIANOKyle] [S: CAROHernan] WaterBottle.objects.filter(supplied_by__name='Hangeug, Inc.')
+[P: MARIANOKyle] [S: CAROHernan] WaterBottle.objects.filter(size__icontains='Oz').order_by('cost')
+[P: MARIANOKyle] [S: CAROHernan] WaterBottle.objects.exclude(cost=3000).filter(mouth_size='Mouth')
+[P: MARIANOKyle] [S: LUNAMiguel] WaterBottle.objects.filter(mouth_size='Standard Mouth')
+[P: MARIANOKyle] [S: LUNAMiguel] WaterBottle.objects.filter(color='Green', supplied_by__name='Blue Eagle, Inc.')
+[P: MARIANOKyle] [S: LUNAMiguel] WaterBottle.objects.filter(cost__lt=3000)
+
+[P: LUNAMiguel] [S: MARIANOKyle] Supplier.objects.filter(country='Canada').values('name')
+[P: LUNAMiguel] [S: MARIANOKyle] WaterBottle.objects.order_by('sku')
+[P: LUNAMiguel] [S: MARIANOKyle] WaterBottle.objects.filter(color='Gray', brand='Kleen Kanteen')
+[P: LUNAMiguel] [S: CAROHernan] WaterBottle.objects.filter(cost__lt=2500)
+[P: LUNAMiguel] [S: CAROHernan] WaterBottle.objects.order_by('-sku')
+[P: LUNAMiguel] [S: CAROHernan] Supplier.objects.get(pk=2).waterbottle_set.all()
+
